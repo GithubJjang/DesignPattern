@@ -1,0 +1,16 @@
+package Observer.Model;
+
+import Observer.Display.CurrentConditionsDisplay;
+
+public class WeatherStation {
+	
+	public static void main(String args[]) {
+		WeatherData weatherData = new WeatherData();
+		
+		CurrentConditionsDisplay conditionsDisplay = new CurrentConditionsDisplay(weatherData);
+		
+		weatherData.setMeasurements(80, 64, 30.4f);
+		weatherData.setMeasurements(82, 70, 29.2f);
+		weatherData.setMeasurements(78, 90, 29.5f);
+	}
+}
